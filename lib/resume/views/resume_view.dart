@@ -13,8 +13,8 @@ class ResumeView extends StatefulWidget {
 
 class _ResumeViewState extends State<ResumeView> {
   final List<Widget> _pages = <Widget>[
-    const OverviewPage(),
-    const Text('About Me'),
+    const AboutMePage(),
+    const SkillsPage(),
     const Text('Expetience'),
   ];
 
@@ -22,22 +22,12 @@ class _ResumeViewState extends State<ResumeView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: deepBlack.withOpacity(.8),
-      body: SafeArea(
-        child: _pages[_selectedIndex],
-      ),
-      bottomNavigationBar: NavigationBarTheme(
-        data: NavigationBarThemeData(
-          elevation: 0,
-          backgroundColor: deepBlack,
-          indicatorColor: grey,
-          surfaceTintColor: lightGrey,
-          labelTextStyle: MaterialStateTextStyle.resolveWith(
-            (states) => const TextStyle(color: lightGrey),
-          ),
+    return SafeArea(
+      child: Scaffold(
+        body: SafeArea(
+          child: _pages[_selectedIndex],
         ),
-        child: NavigationBar(
+        bottomNavigationBar: NavigationBar(
           selectedIndex: _selectedIndex,
           onDestinationSelected: (newIndex) {
             setState(() {
@@ -46,34 +36,32 @@ class _ResumeViewState extends State<ResumeView> {
           },
           destinations: const [
             NavigationDestination(
-              icon: Icon(
-                Icons.home_outlined,
-                color: lightGrey,
-              ),
-              selectedIcon: Icon(Icons.home, color: lightGrey),
+              icon: Icon(Icons.home_outlined),
+              selectedIcon: Icon(Icons.home),
               label: 'Overview',
             ),
             NavigationDestination(
-              icon: Icon(Icons.info_outline, color: lightGrey),
-              selectedIcon: Icon(Icons.info, color: lightGrey),
-              label: 'About Me',
+              icon: Icon(Icons.info_outline),
+              selectedIcon: Icon(Icons.info),
+              label: 'Skills',
             ),
             NavigationDestination(
-              icon: Icon(Icons.person_outlined, color: lightGrey),
-              selectedIcon: Icon(Icons.person, color: lightGrey),
+              icon: Icon(Icons.person_outlined),
+              selectedIcon: Icon(Icons.person),
               label: 'Experience',
             ),
           ],
         ),
+        // body: _pages[_selectedIndex],
       ),
     );
   }
 }
 
 ///
-class OverviewPage extends StatelessWidget {
+class SkillsPage extends StatelessWidget {
   ///
-  const OverviewPage({super.key});
+  const SkillsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -86,120 +74,125 @@ class OverviewPage extends StatelessWidget {
           Stack(
             clipBehavior: Clip.none,
             children: [
-              Container(
-                padding: const EdgeInsets.all(15),
-                height: 400,
-                decoration: const BoxDecoration(
-                  color: grey,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    SizedBox(height: 40),
-                    Align(
-                      child: Text(
-                        'Abdulrasheed Fawole',
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  height: 400,
+                  // decoration: const BoxDecoration(
+                  //   color: grey,
+                  //   borderRadius: BorderRadius.all(
+                  //     Radius.circular(15),
+                  //   ),
+                  // ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      SizedBox(height: 40),
+                      Align(
+                        child: Text(
+                          'Abdulrasheed Fawole',
+                          style: TextStyle(
+                            color: lightGrey,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Skills',
                         style: TextStyle(
                           color: lightGrey,
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Skills',
-                      style: TextStyle(
-                        color: lightGrey,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
+                      SizedBox(height: 10),
+                      Text(
+                        'Flutter and Dart',
+                        style: TextStyle(
+                          color: lightGrey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Flutter and Dart',
-                      style: TextStyle(
-                        color: lightGrey,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
+                      SizedBox(height: 5),
+                      LinearProgressIndicator(
+                        backgroundColor: Colors.white,
+                        value: .60,
+                        color: Colors.lightBlueAccent,
+                        minHeight: 5,
                       ),
-                    ),
-                    SizedBox(height: 5),
-                    LinearProgressIndicator(
-                      backgroundColor: Colors.white,
-                      value: .60,
-                      color: Colors.lightBlueAccent,
-                      minHeight: 5,
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Go',
-                      style: TextStyle(
-                        color: lightGrey,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
+                      SizedBox(height: 10),
+                      Text(
+                        'Go',
+                        style: TextStyle(
+                          color: lightGrey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 5),
-                    LinearProgressIndicator(
-                      backgroundColor: Colors.white,
-                      value: .40,
-                      color: Colors.teal,
-                      minHeight: 5,
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Git',
-                      style: TextStyle(
-                        color: lightGrey,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
+                      SizedBox(height: 5),
+                      LinearProgressIndicator(
+                        backgroundColor: Colors.white,
+                        value: .40,
+                        color: Colors.teal,
+                        minHeight: 5,
                       ),
-                    ),
-                    SizedBox(height: 5),
-                    LinearProgressIndicator(
-                      backgroundColor: Colors.white,
-                      value: .55,
-                      color: Colors.redAccent,
-                      minHeight: 5,
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Linux',
-                      style: TextStyle(
-                        color: lightGrey,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
+                      SizedBox(height: 10),
+                      Text(
+                        'Git',
+                        style: TextStyle(
+                          color: lightGrey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 5),
-                    LinearProgressIndicator(
-                      backgroundColor: Colors.white,
-                      value: .75,
-                      color: Colors.cyan,
-                      minHeight: 5,
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'Problem Solving',
-                      style: TextStyle(
-                        color: lightGrey,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
+                      SizedBox(height: 5),
+                      LinearProgressIndicator(
+                        backgroundColor: Colors.white,
+                        value: .55,
+                        color: Colors.redAccent,
+                        minHeight: 5,
                       ),
-                    ),
-                    SizedBox(height: 5),
-                    LinearProgressIndicator(
-                      backgroundColor: Colors.white,
-                      value: .75,
-                      color: Colors.orange,
-                      minHeight: 5,
-                    ),
-                  ],
+                      SizedBox(height: 10),
+                      Text(
+                        'Linux',
+                        style: TextStyle(
+                          color: lightGrey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      LinearProgressIndicator(
+                        backgroundColor: Colors.white,
+                        value: .75,
+                        color: Colors.cyan,
+                        minHeight: 5,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Problem Solving',
+                        style: TextStyle(
+                          color: lightGrey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      LinearProgressIndicator(
+                        backgroundColor: Colors.white,
+                        value: .75,
+                        color: Colors.orange,
+                        minHeight: 5,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const Positioned(
@@ -231,7 +224,6 @@ class OverviewPage extends StatelessWidget {
               spacing: 10,
               children: const [
                 Chip(
-                  backgroundColor: grey,
                   label: Text(
                     'Mathematics',
                     style: TextStyle(
@@ -242,7 +234,6 @@ class OverviewPage extends StatelessWidget {
                   ),
                 ),
                 Chip(
-                  backgroundColor: grey,
                   label: Text(
                     'Linux',
                     style: TextStyle(
@@ -253,7 +244,6 @@ class OverviewPage extends StatelessWidget {
                   ),
                 ),
                 Chip(
-                  backgroundColor: grey,
                   label: Text(
                     'Games',
                     style: TextStyle(
@@ -264,9 +254,18 @@ class OverviewPage extends StatelessWidget {
                   ),
                 ),
                 Chip(
-                  backgroundColor: grey,
                   label: Text(
                     'Sleeping',
+                    style: TextStyle(
+                      color: lightGrey,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                Chip(
+                  label: Text(
+                    'Hardwares',
                     style: TextStyle(
                       color: lightGrey,
                       fontSize: 15,
@@ -279,6 +278,29 @@ class OverviewPage extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+///
+class AboutMePage extends StatelessWidget {
+  ///
+  const AboutMePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: const [
+        SizedBox(height: 20),
+        Align(
+          child: CircleAvatar(
+            radius: 70,
+            backgroundImage: AssetImage('assets/portrait.jpg'),
+          ),
+        ),
+        SizedBox(height: 15),
+        Text(''),
+      ],
     );
   }
 }
