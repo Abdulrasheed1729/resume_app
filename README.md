@@ -1,6 +1,6 @@
 # resume_app
 
-A simple resume app.
+A simple mobile app for my resume.
 
 ## Code 💻
 
@@ -41,7 +41,9 @@ To add state managements solutions like [flutter_bloc](https://bloclibrary.dev) 
 The **UI** design follows a minimalistic form of design, as the app comprises of just two pages which is very intuitive enough for easy navigation.
 
 ### Screenshots
-
+|Home Page|About me Page|
+|---|---|
+|![Home Page](screenshots/home-page.png "Home page")|![About me Page](screenshots/about-me-page.png "About me page")| 
 
 
 ## Libraries and Plugins 🔌
@@ -71,7 +73,7 @@ flutter run
 
 ## Appetize Link 🔗
 
-[Link to the appetize demo](https://appetize.io)
+[Link to the appetize demo](https://appetize.io/app/mzy6urnl25kv5e4ldibld4oykq?device=pixel4&osVersion=11.0&scale=75)
 <!-- ## Getting Started
 ![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")
 This project is a starting point for a Flutter application.
