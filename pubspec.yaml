@@ -29,9 +29,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  animated_text_kit: ^4.2.2
   cupertino_icons: ^1.0.2
-  flex_color_scheme: ^6.0.1
   flutter:
     sdk: flutter
   flutter_svg: ^1.1.6
@@ -41,7 +39,6 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  very_good_analysis: ^3.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

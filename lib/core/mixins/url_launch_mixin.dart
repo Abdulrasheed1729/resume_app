@@ -1,24 +1,24 @@
 import 'package:resume_app/core/constants/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-/// The `mixin` that handles the launching of
-/// external links in the app
+/// The `mixin` that handles the launching of urls using
+/// the `url_laucher` library
 mixin UrlLaunchMixin {
-  ///  Opens [Twitter](https://twitter.com)
+  ///  launches the given  [Twitter](https://twitter.com) url
   Future<void> gotoTwitter() async {
     try {
       await launchUrl(twitterUrl);
     } catch (_) {}
   }
 
-  /// Opens [LinkedIn](https://linkedin.com)
+  /// launches the given [LinkedIn](https://linkedin.com) url
   Future<void> gotoLinkedin() async {
     try {
       await launchUrl(linkedinUrl);
     } catch (_) {}
   }
 
-  /// Opens [Gituhb](https://github.com)
+  /// launches the given [Gituhb](https://github.com) url
   Future<void> gotoGithub() async {
     try {
       await launchUrl(githubUrl);

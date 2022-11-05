@@ -12,23 +12,20 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      child: RawMaterialButton(
-        onPressed: onTap,
-        fillColor: Colors.white,
-        constraints:
-            const BoxConstraints(minHeight: 50, minWidth: 200, maxWidth: 200),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: Text(
-          text,
-          style: const TextStyle(
-            color: Colors.teal,
-            fontSize: 20,
-            fontStyle: FontStyle.italic,
-          ),
+    return RawMaterialButton(
+      onPressed: onTap,
+      fillColor: Colors.white,
+      constraints:
+          const BoxConstraints(minHeight: 50, minWidth: 200, maxWidth: 200),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: Colors.teal,
+          fontSize: 20,
+          fontStyle: FontStyle.italic,
         ),
       ),
     );

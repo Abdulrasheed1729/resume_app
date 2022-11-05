@@ -18,6 +18,9 @@ class ContactCard extends StatelessWidget {
       onTap: onTap,
       child: Card(
         color: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
         child: SizedBox(
           height: 55,
           width: 55,

@@ -4,7 +4,8 @@ import 'package:resume_app/core/helpers/helpers.dart';
 final Uri twitterUrl = Uri.parse('https://twitter.com/bolaji1729');
 
 /// The url to the [linkedin](https://linkedin.com) page
-final Uri linkedinUrl = Uri.parse('https://linkedin.com/bolaji1729');
+final Uri linkedinUrl =
+    Uri.parse('https://www.linkedin.com/in/abdulrasheed-fawole-6aa0851a1/');
 
 /// The url to the [github](https://github.com) page
 final Uri githubUrl = Uri.parse('https://github.com/Abdulrasheed1729');

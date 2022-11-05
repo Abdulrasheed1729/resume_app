@@ -54,12 +54,13 @@ class AboutMePage extends StatelessWidget {
                 SkillsChip(text: 'Linux'),
                 SkillsChip(text: 'Shell scripting'),
                 SkillsChip(text: 'Git'),
+                SkillsChip(text: 'Leadership'),
                 SkillsChip(text: 'Critical thinking'),
               ],
             ),
             const SizedBox(height: 10),
             const Text(
-              'Why hire me?',
+              'How I will be of help to this company',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20.0,
@@ -70,11 +71,12 @@ class AboutMePage extends StatelessWidget {
             const DecoratedBox(
               decoration: BoxDecoration(),
               child: Text(
-                '',
+                AppText.whyHireMeText,
                 style: TextStyle(
+                  wordSpacing: .5,
                   color: Colors.white,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  fontStyle: FontStyle.italic,
                 ),
               ),
             ),
