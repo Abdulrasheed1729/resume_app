@@ -45,6 +45,10 @@ The **UI** design follows a minimalistic form of design, as the app comprises of
 |---|---|
 |![Home Page](screenshots/home-page.png "Home page")|![About me Page](screenshots/about-me-page.png "About me page")| 
 
+## Features
+- Two screens that comprises of the home page and about me page.
+- Social media links to get acces to the differents media webpages.
+
 
 ## Libraries and Plugins 🔌
 A brief description of the libraries used.
@@ -53,6 +57,10 @@ A brief description of the libraries used.
 |---|---|---|
 |[url_launcher](https://pub.dev/packages/url_launcher)| ^6.1.6| For launching urls |
 |[flutter_svg](https://pub.dev/packages/flutter_svg)| ^1.1.6 | For rendering svg files|
+
+
+## Challenges
+The major challenge faced while working on this project is the choice of the UI design to use, so as to avoid too much dependence on libraries, but after browsing through [Dribbble](https://dribbble.com), I decided to just use the design I came up with.
 
 
 ## Installation 🔨
@@ -70,6 +78,10 @@ to get the packages, to run the app run
 ```
 flutter run
 ```
+
+## Release
+
+[Link to apk file](https://drive.google.com/drive/folders/1M7K-ZzWlAwe21gVsrIYtrk8IdodcqGG4)
 
 ## Appetize Link 🔗
 
