@@ -7,6 +7,7 @@ class AboutMePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.teal,
       appBar: AppBar(
@@ -16,7 +17,9 @@ class AboutMePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: EdgeInsets.symmetric(
+          horizontal: size.width > 600 ? 100 : 25.0,
+        ),
         child: ListView(
           children: [
             const SizedBox(height: 25),

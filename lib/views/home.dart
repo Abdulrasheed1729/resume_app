@@ -9,15 +9,16 @@ class HomePage extends StatelessWidget with UrlLaunchMixin {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.teal[500],
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Padding(
+        padding:
+            EdgeInsets.symmetric(horizontal: size.width > 600 ? 100 : 25.0),
+        child: Center(
+          child: ListView(
             children: [
+              SizedBox(height: size.width > 600 ? 10 : 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
@@ -76,7 +77,9 @@ class HomePage extends StatelessWidget with UrlLaunchMixin {
               ),
               const SizedBox(height: 15),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: size.width > 600
+                    ? MainAxisAlignment.spaceEvenly
+                    : MainAxisAlignment.spaceBetween,
                 children: [
                   ContactCard(
                     logoUrl: 'assets/svgs/gmail-logo.svg',
