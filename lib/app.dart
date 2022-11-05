@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resume_app/app_theme.dart';
-import 'package:resume_app/resume/resume.dart';
+import 'package:resume_app/views/views.dart';
 
 /// The entry pint for the App
 class ResumeApp extends StatelessWidget {
@@ -9,12 +8,10 @@ class ResumeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Resume App',
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
       // darkTheme: FlexThemeData.dark(scheme: FlexScheme.espresso),
-      home: const ResumeView(),
+      home: HomePage(),
     );
   }
 }
